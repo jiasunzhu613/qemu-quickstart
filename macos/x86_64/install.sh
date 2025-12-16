@@ -8,7 +8,7 @@ qemu-img create -f qcow2 "$QCOW2_IMAGE" 16G
 qemu-system-x86_64 \
     -m 4096 \
     -cdrom "$ISO" \
-    -drive file="$QCOW2_IMAGE" \
-    -device e1000,netdev=unet \
-    -netdev user,id=unet \
+    -hda "$QCOW2_IMAGE" \
+    -device e1000,netdev=net0 \
+    -netdev user,id=net0 \
     -boot once=d \
