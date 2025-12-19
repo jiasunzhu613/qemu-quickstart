@@ -9,6 +9,9 @@ At the time of writing, only scripts for running different architectures on maco
 First cd into any folder containing both `install.sh` and `run.sh` scripts
 
 ```
-./install.sh cowsay_random.iso mooo.qcow2
-./run.sh 10022 mooo.qcow2
+./install.sh -i cowsay_random.iso -img mooo.qcow2
+./run.sh -p 10022 -img mooo.qcow2
+ssh <user>@localhost -p 10022
 ```
+
+If you need help regarding using the scripts, use the `-h` flag for all the option flags possible (there are not many right now)!
